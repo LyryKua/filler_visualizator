@@ -55,7 +55,7 @@ CC :=					gcc
 INC :=					-I$(LIBFTPRINTF_DIR)inc/		\
 						-I$(LIBFTPRINTF_DIR)libft/inc	\
 						-I$(INC_DIR)
-#CFLAGS :=				-Wall -Werror -Wextra
+CFLAGS :=				-Wall -Werror -Wextra
 LIBFTPRINTF_FLAGS :=	-L$(LIBFTPRINTF_DIR) -lftprintf
 MLX_FLAGS :=			-lmlx -framework OpenGL -framework AppKit 
 

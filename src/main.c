@@ -96,7 +96,7 @@ static t_sqr	*get_height_width()
 	return (sqr);
 }
 
-int				main(int argc, char *argv[])
+int				main(void)
 {
 	t_all		all;
 	t_graphics	*graphics;
