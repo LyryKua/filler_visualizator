@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <math.h>
-#include "visualization.h"
+#include "visualizator.h"
 #include "color.h"
 
 static void	draw_diagonal(t_graphics *graphics, t_point start, t_point end)

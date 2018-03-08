@@ -11,23 +11,23 @@
 /* ************************************************************************** */
 
 #include <math.h>
-#include "visualization.h"
+#include "visualizator.h"
 #include "libft.h"
 
-void	horizontal(t_graphics *graphics, int x)
+static void	horizontal(t_graphics *graphics, int x)
 {
 	int	i;
 	int	j;
 	int	finish;
 
 	i = x;
-	while (i < graphics->h)
+	while (i < graphics->height_win)
 	{
 		finish = i + (int)rint(x * 0.1);
 		while (i < finish)
 		{
 			j = 0;
-			while (j < graphics->w)
+			while (j < graphics->width_win)
 			{
 				graphics->put_pixel(graphics, i, j, 0x111111);
 				j++;
@@ -38,20 +38,20 @@ void	horizontal(t_graphics *graphics, int x)
 	}
 }
 
-void	vertical(t_graphics *graphics, int x)
+static void	vertical(t_graphics *graphics, int x)
 {
 	int	i;
 	int	j;
 	int	finish;
 
 	i = x;
-	while (i < graphics->w)
+	while (i < graphics->width_win)
 	{
 		finish = i + (int)rint(x * 0.1);
 		while (i < finish)
 		{
 			j = 0;
-			while (j < graphics->h)
+			while (j < graphics->height_win)
 			{
 				graphics->put_pixel(graphics, j, i, 0x111111);
 				j++;
@@ -62,9 +62,10 @@ void	vertical(t_graphics *graphics, int x)
 	}
 }
 
-void	draw_grid(t_graphics *graphics, int x)
+void		draw_grid(t_graphics *graphics, int x)
 {
-	ft_bzero(graphics->addr, WIDTH * HEIGHT * 4);
+	ft_bzero(graphics->addr,
+						(size_t)graphics->width_win * graphics->height_win * 4);
 	horizontal(graphics, x);
 	vertical(graphics, x);
 }

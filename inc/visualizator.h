@@ -13,43 +13,13 @@
 #ifndef VISUALIZATION_H
 # define VISUALIZATION_H
 
+# include "graphics.h"
+
 # define WIDTH	1440
 # define HEIGHT	900
 # define X	20
 
-typedef struct s_graphics	t_graphics;
-typedef struct s_rect		t_rect;
-typedef struct s_point		t_point;
 
-struct	s_point
-{
-	int				x;
-	int				y;
-	unsigned int	color;
-};
-
-struct	s_rect
-{
-	int	x;
-	int	y;
-	int	w;
-};
-
-struct	s_graphics
-{
-	void	*mlx;
-	void	*win;
-	void	*img;
-	void	*addr;
-	int		bpp;
-	int		sl;
-	int		e;
-	int		w;
-	int		h;
-	void	(*put_pixel)(t_graphics *, int, int, unsigned int);
-};
-
-t_graphics	*init_graphics(int width, int height, char *title);
 
 /* ************************************************************************** */
 
@@ -62,7 +32,6 @@ struct	s_all
 {
 	t_stuff		*instance;
 	t_graphics	*graphics;
-	int			fd;
 	int			x;
 };
 
@@ -76,7 +45,7 @@ struct	s_sqr
 struct	s_stuff
 {
 	t_sqr	*plateau;
-	t_sqr	*(*read)(char *, int);
+	t_sqr	*(*read)(t_all *, char *);
 	void	(*destructor)(t_sqr **);
 };
 
@@ -89,5 +58,8 @@ void	draw_new_x(t_graphics *graphics, t_rect *rect, unsigned int color);
 void	draw_old_o(t_graphics *graphics, t_rect *rect, unsigned int color);
 void	draw_new_o(t_graphics *graphics, t_rect *rect, unsigned int color);
 void	draw_grid(t_graphics *graphics, int x);
+
+int		close_window(t_all *all, char *msg);
+void	error_exit(char *msg);
 
 #endif

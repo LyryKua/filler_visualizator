@@ -6,7 +6,7 @@
 #    By: khrechen <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/14 14:55:42 by khrechen          #+#    #+#              #
-#    Updated: 2018/03/07 12:04:56 by khrechen         ###   ########.fr        #
+#    Updated: 2018/03/08 15:38:07 by khrechen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,23 +23,24 @@ LIGHT_YELLOW :=			$(SWITCH)93m
 LIGHT_GREEN :=			$(SWITCH)92m
 LIGHT_CYAN :=			$(SWITCH)96m
 
-NAME :=					magic
+NAME :=					visualizator
 
-INC_DIR :=				./
+INC_DIR :=				./inc/
 
-LIBFTPRINTF_DIR :=		../libftprintf/
+LIBFTPRINTF_DIR :=		./libftprintf/
 
-SRCS_DIR :=				./
+SRCS_DIR :=				./src/
 
-OBJS_DIR :=				objs/
+OBJS_DIR :=				./obj/
 
 SRCS :=					draw.c			\
 						draw_grid.c		\
 						draw_o.c		\
 						draw_x.c		\
+						error_exit.c	\
 						graphics.c		\
 						main.c			\
-						plateau_piece.c
+						plateau.c
 
 OBJS :=					$(SRCS:.c=.o)
 
@@ -54,7 +55,7 @@ CC :=					gcc
 INC :=					-I$(LIBFTPRINTF_DIR)inc/		\
 						-I$(LIBFTPRINTF_DIR)libft/inc	\
 						-I$(INC_DIR)
-CFLAGS :=				-Wall -Werror -Wextra
+#CFLAGS :=				-Wall -Werror -Wextra
 LIBFTPRINTF_FLAGS :=	-L$(LIBFTPRINTF_DIR) -lftprintf
 MLX_FLAGS :=			-lmlx -framework OpenGL -framework AppKit 
 

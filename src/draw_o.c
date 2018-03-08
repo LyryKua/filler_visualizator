@@ -12,7 +12,7 @@
 
 #include <math.h>
 #include "color.h"
-#include "visualization.h"
+#include "visualizator.h"
 
 static void	draw_line(t_graphics *graphics, t_point start, t_point end)
 {

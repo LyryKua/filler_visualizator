@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <math.h>
-#include "visualization.h"
+#include "visualizator.h"
 #include "color.h"
 
 void	fill_rectangle(t_graphics *graphics, t_rect *rect, unsigned int color)
