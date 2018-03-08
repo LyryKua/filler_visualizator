@@ -12,9 +12,7 @@
 
 #include <stdlib.h>
 #include <mlx.h>
-#include <fcntl.h>
 #include <zconf.h>
-#include <stdbool.h>
 #include <math.h>
 #include "graphics.h"
 #include "visualizator.h"
