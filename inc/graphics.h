@@ -21,21 +21,21 @@ typedef struct s_graphics	t_graphics;
 typedef struct s_rect		t_rect;
 typedef struct s_point		t_point;
 
-struct	s_point
+struct		s_point
 {
 	int				x;
 	int				y;
 	unsigned int	color;
 };
 
-struct	s_rect
+struct		s_rect
 {
 	int	x;
 	int	y;
 	int	w;
 };
 
-struct	s_graphics
+struct		s_graphics
 {
 	void	*mlx;
 	void	*win;

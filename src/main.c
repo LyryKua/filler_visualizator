@@ -69,7 +69,7 @@ static int		visualization(t_all *all)
 	return (0);
 }
 
-static t_sqr	*get_height_width()
+static t_sqr	*get_height_width(void)
 {
 	char	*line;
 	t_sqr	*sqr;

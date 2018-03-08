@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   visualization.h                                    :+:      :+:    :+:   */
+/*   visualizator.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khrechen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,19 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VISUALIZATION_H
-# define VISUALIZATION_H
+#ifndef VISUALIZATOR_H
+# define VISUALIZATOR_H
 
 # include "graphics.h"
-
-# define WIDTH	1440
-# define HEIGHT	900
-# define X	20
-
-
-
-/* ************************************************************************** */
-
 
 typedef struct s_sqr	t_sqr;
 typedef struct s_stuff	t_stuff;
